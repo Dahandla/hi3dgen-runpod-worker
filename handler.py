@@ -6,6 +6,7 @@ Must match the API contract validated by the Blender addon.
 """
 
 import traceback
+import runpod
 from utils.validation import validate_request
 from pipeline.run import run_pipeline
 
@@ -43,4 +44,9 @@ def handler(event):
                 "retryable": True
             }
         }
+
+
+runpod.serverless.start({
+    "handler": handler
+})
 
