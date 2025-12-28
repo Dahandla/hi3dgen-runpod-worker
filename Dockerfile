@@ -54,3 +54,4 @@ ENV PYTHONPATH=/app:${PYTHONPATH}
 # This CMD is a fallback for local testing
 CMD ["python3", "-c", "from handler import handler; print('Handler ready')"]
 
+# force rebuild: lifecycle fix
